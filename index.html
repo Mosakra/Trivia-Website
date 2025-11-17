@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends Trivia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">Play Game</a>
+            <a href="add-question.html" class="nav-link">Add Question</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>League of Legends Trivia</h1>
+            <p class="subtitle">Test Your Knowledge of Runeterra</p>
+        </header>
+
+        <div id="game-container">
+            <div id="start-screen">
+                <h2>Welcome Summoner!</h2>
+                <p>Answer 10 questions about League of Legends champions, lore, and gameplay.</p>
+                <button class="btn-primary" id="start-btn">Start Game</button>
+            </div>
+
+            <div id="question-screen" style="display: none;">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="question-counter" id="question-counter">Question 1 of 10</div>
+                <h2 id="question-text"></h2>
+                <div class="answers-grid" id="answers-container"></div>
+                <button class="btn-primary" id="next-btn" style="display: none;">Next Question</button>
+            </div>
+
+            <div id="results-screen" style="display: none;">
+                <h2>Game Complete!</h2>
+                <div class="score-display" id="final-score">0/10</div>
+                <p class="score-message" id="score-message"></p>
+                <button class="btn-primary" id="restart-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
