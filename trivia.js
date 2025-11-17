@@ -17,3 +17,40 @@ const finalScore = getElement("#final-score");
 const scoreMessage = getElement("#score-message");
 
 
+const questions = [
+    "Who was responsible for accidentally killings Yasuo's master, Elder Kusho?",
+    "From which region do the champions Vi and Jinx originally come from?",
+    "What is the name of the entity that is trapped inside Kayn's scythe?"
+];
+
+const answer1 = [
+    "Cassiopeia",
+    "Piltover",
+    "Varus"
+];
+
+const answer2 = [
+    "Riven",
+    "Noxus",
+    "Rhaast"
+];
+
+const answer3 = [
+    "Kayn",
+    "Demacia",
+    "Xerath"
+];
+
+const answer4 = [
+    "Viego",
+    "Zaun",
+    "Aatrox",
+];
+
+const correctAnswer = [
+    "Riven",
+    "Zaun",
+    "Rhaast"
+];
+
+
