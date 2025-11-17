@@ -15,4 +15,3 @@ const progressFill = document.getElement("#progress-fill");
 
 const finalScore = document.getElement("#final-score");
 const scoreMessage = document.getElement("#score-message");
-

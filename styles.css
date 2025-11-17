@@ -353,7 +353,9 @@ textarea {
 }
 .top-banner {
     width: 100%;
-    max-height: 180px;   
-    object-fit: cover;
+    height: 400px; 
+    max-height: 400px;
+    object-fit: cover; 
+    object-position: 50% 0%; 
     display: block;
 }
