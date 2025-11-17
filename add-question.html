@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Question - League of Legends Trivia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">Play Game</a>
+            <a href="add-question.html" class="nav-link active">Add Question</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Add Your Own Question</h1>
+            <p class="subtitle">Contribute to the Trivia Pool</p>
+        </header>
+
+        <div id="add-question-section">
+            <h2>Create a New Trivia Question</h2>
+            <form id="add-question-form">
+                <div class="form-group">
+                    <label for="new-question">Question:</label>
+                    <textarea id="new-question" rows="3" required placeholder="Enter your trivia question..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="answer1">Answer 1:</label>
+                    <input type="text" id="answer1" required placeholder="First answer option">
+                </div>
+
+                <div class="form-group">
+                    <label for="answer2">Answer 2:</label>
+                    <input type="text" id="answer2" required placeholder="Second answer option">
+                </div>
+
+                <div class="form-group">
+                    <label for="answer3">Answer 3:</label>
+                    <input type="text" id="answer3" required placeholder="Third answer option">
+                </div>
+
+                <div class="form-group">
+                    <label for="answer4">Answer 4:</label>
+                    <input type="text" id="answer4" required placeholder="Fourth answer option">
+                </div>
+
+                <div class="form-group">
+                    <label for="correct-answer">Correct Answer (1-4):</label>
+                    <input type="number" id="correct-answer" min="1" max="4" required placeholder="Enter 1, 2, 3, or 4">
+                </div>
+
+                <button type="submit" class="btn-primary">Add Question</button>
+            </form>
+            <p id="form-message" style="text-align: center; margin-top: 20px; color: #c8aa6e;"></p>
+        </div>
+    </div>
+
+    <script src="add-question.js"></script>
+</body>
+</html>
