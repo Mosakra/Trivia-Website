@@ -46,6 +46,7 @@ const displayQuestion = () => {
 
     questionText.textContent = currentQuestion.question;
     answersContainer.textContent = "";
+    nextBtn.style.display = "none";
 
     for (let i = 0; i < currentQuestion.answers.length; i++){
         const btn = document.createElement("button");
@@ -53,6 +54,7 @@ const displayQuestion = () => {
 
         btn.document.addEventListeners("click", () => {
             selectedAnswer = currentQuestion.answers[i];
+            nextBtn.style.display = "block";
         })
 
         answersContainer.appendChild(btn);
@@ -64,3 +66,32 @@ const showResults = () => {
     resultsScreen.style.display = "block";
     finalScore.textContent = score + " / " + loreQuestions.length;
 }
+
+
+const nextQuestion = () => {
+    if (selectedAnswer === loreQuestions[questionIndex].correctAnswer){
+        score++;
+        questionIndex++;
+
+        if (questionIndex < loreQuestions.length){
+            displayQuestion();
+        }
+        else{
+            showResults();
+        }
+    }
+}
+
+startBtn.document.addEventListeners("click", () => {
+    score = 0;
+    questionIndex = 0;
+
+    startScreen.style.display = "none";
+    questionScreen.style.display = "block";
+
+    displayQuestion();
+})
+
+nextBtn.document.addEventListeners("click", () => {
+    nextQuestion();
+})
