@@ -35,4 +35,26 @@ const loreQuestions = [
 ];
 
 
+let questionIndex = 0;
+let score = 0;
+let selectedAnswer = "";
 
+const displayQuestion = () => {
+    const currentQuestion = loreQuestions[questionIndex];
+
+    questionCounter.textContent = `Question ${questionIndex + 1} of ${loreQuestions.length}`;
+
+    questionText.textContent = currentQuestion.question;
+    answersContainer.textContent = "";
+
+    for (let i = 0; i < currentQuestion.answers.length; i++){
+        const btn = document.createElement("button");
+        btn.textContent = currentQuestion.answers[i];
+
+        btn.document.addEventListeners("click", () => {
+            selectedAnswer = currentQuestion.answers[i];
+        })
+
+        answersContainer.appendChild(btn);
+    }
+}
