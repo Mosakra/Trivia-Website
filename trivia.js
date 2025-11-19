@@ -58,3 +58,9 @@ const displayQuestion = () => {
         answersContainer.appendChild(btn);
     }
 }
+
+const showResults = () => {
+    questionScreen.style.display = "none";
+    resultsScreen.style.display = "block";
+    finalScore.textContent = score + " / " + loreQuestions.length;
+}
