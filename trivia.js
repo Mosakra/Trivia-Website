@@ -96,3 +96,9 @@ startBtn.addEventListener("click", () => {
 nextBtn.addEventListener("click", () => {
     nextQuestion();
 })
+
+restartBtn.addEventListener("click", () => {
+    startScreen.style.display = "block";
+    questionScreen.style.display = "none";
+    resultsScreen.style.display = "none";
+})
