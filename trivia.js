@@ -55,7 +55,7 @@ const displayQuestion = () => {
 
         btn.addEventListener("click", () => {
             const answerBtns = answersContainer.querySelectorAll("button");
-            for (let j = 0; j < answersContainer.length; j++){
+            for (let j = 0; j < answerBtns.length; j++){
                 answerBtns[j].classList.remove("selected");
             }
             btn.classList.add("selected");
