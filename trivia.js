@@ -51,9 +51,15 @@ const displayQuestion = () => {
     for (let i = 0; i < currentQuestion.answers.length; i++){
         const btn = document.createElement("button");
         btn.textContent = currentQuestion.answers[i];
+        btn.classList.add("answer-btn");
 
         btn.addEventListener("click", () => {
-            selectedAnswer = currentQuestion.answers[i];
+            const answerBtns = answersContainer.querySelector("button");
+            for (let j = 0; j < answersContainer.length; j++){
+                answerBtns[j].classList.remove("selected");
+            }
+            btn.classList.add("selected");
+            selectedAnswer = btn.textContent;
             nextBtn.style.display = "block";
         })
 
@@ -71,14 +77,14 @@ const showResults = () => {
 const nextQuestion = () => {
     if (selectedAnswer === loreQuestions[questionIndex].correctAnswer){
         score++;
-        questionIndex++;
+    }
+    questionIndex++;
 
-        if (questionIndex < loreQuestions.length){
-            displayQuestion();
-        }
-        else{
-            showResults();
-        }
+    if (questionIndex < loreQuestions.length){
+        displayQuestion();
+    }
+    else{
+        showResults();
     }
 }
 
