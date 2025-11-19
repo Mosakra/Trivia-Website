@@ -52,7 +52,7 @@ const displayQuestion = () => {
         const btn = document.createElement("button");
         btn.textContent = currentQuestion.answers[i];
 
-        btn.document.addEventListeners("click", () => {
+        btn.addEventListener("click", () => {
             selectedAnswer = currentQuestion.answers[i];
             nextBtn.style.display = "block";
         })
@@ -82,7 +82,8 @@ const nextQuestion = () => {
     }
 }
 
-startBtn.document.addEventListeners("click", () => {
+
+startBtn.addEventListener("click", () => {
     score = 0;
     questionIndex = 0;
 
@@ -92,6 +93,6 @@ startBtn.document.addEventListeners("click", () => {
     displayQuestion();
 })
 
-nextBtn.document.addEventListeners("click", () => {
+nextBtn.addEventListener("click", () => {
     nextQuestion();
 })
