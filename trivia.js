@@ -31,6 +31,66 @@ const loreQuestions = [
         question: "What is the name of the entity that is trapped inside Kayn's scythe?",
         answers: ["Varus", "Rhaast", "Xerath", "Aatrox"],
         correctAnswer: "Rhaast"
+    },
+    {
+        question: "Before being transformed into a human-like Vastaya, what kind of animal was Ahri?",
+        answers: ["Bear", "Wolf", "Fox", "Snake"],
+        correctAnswer: "Fox"
+    },
+    {
+        question: "Which champion did Thresh trap and capture the soul of, before they were eventually rescued by Lucian?",
+        answers: ["Caitlyn", "Senna", "Lux", "Sivir"],
+        correctAnswer: "Senna"
+    },
+    {
+        question: "The champion Tryndamere is married to is the leader of which Frelijordian tribe?",
+        answers: ["Lissandra of the Frostguard", "Sejuani of the Winter's Claw", "Anivia of the Avarosan", "Ashe of the Avarosan"],
+        correctAnswer: "Ashe of the Avarosan"
+    },
+    {
+        question: "What does the name 'Zac' stand for?",
+        answers: ["Zealot Annihilating Combatant", "Zaun Amorphous Combatant", "Ziggs' Amazing Creation", "Zone Alpha Cylon"],
+        correctAnswer: "Zaun Amorphous Combatant"
+    },
+    {
+        question: "Which champion is known as 'The Starcaster'?",
+        answers: ["Zoe", "Aurelion Sol", "Lulu", "Janna"],
+        correctAnswer: "Aurelion Sol"
+    },
+    {
+        question: "Which champion can shapeshift into a dragon form?",
+        answers: ["Shyvana", "Sett", "Rengar", "Aurelion Sol"],
+        correctAnswer: "Shyvana"
+    },
+    {
+        question: "Who is the main antagoonist in the 'Ruined King' lore event?",
+        answers: ["Mordekaiser", "Hecarim", "Viego", "Zed"],
+        correctAnswer: "Viego"
+    },
+    {
+        question: "What did the yordle Fizz do to earn the acceptance of the people of Bilgewater?",
+        answers: ["He killed a wanted pirate", "He found a powerful magical treasure for them", "He saved the city from a massive dragon-shark", "He helped negotiate a treaty with Noxus"],
+        correctAnswer: "He saved the city from a massive dragon-shark"
+    },
+    {
+        question: "Which of these champions does NOT come from the void?",
+        answers: ["Kha'Zix", "Cho'Gath", "Kassadin", "Karthus"],
+        correctAnswer: "Karthus"
+    },
+    {
+        question: "In the official lore, what is the relationship between Katarina and Cassiopeia?",
+        answers: ["They are sisters", "They are rivals", "They are mother and daughter", "They are unrelated"],
+        correctAnswer: "They are sisters"
+    },
+    {
+        question: "Which champion has a lore story of tryin to die an honorable death in battle, but is so strong he keeps winning instead?",
+        answers: ["Gragas", "Olaf", "Braum", "Tryndamere"],
+        correctAnswer: "Olaf"
+    },
+    {
+        question: "What celestial object is Aurelion Sol responsible for creating?",
+        answers: ["The moon", "The sun", "The stars", "The planet Runeterra"],
+        correctAnswer: "The stars"
     }
 ];
 
