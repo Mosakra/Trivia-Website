@@ -100,6 +100,10 @@ let score = 0;
 let selectedAnswer = "";
 let gameQuestions = [];
 
+const randomQuestions = () => {
+    
+}
+
 const displayQuestion = () => {
     const currentQuestion = loreQuestions[questionIndex];
 
