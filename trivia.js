@@ -98,6 +98,7 @@ const loreQuestions = [
 let questionIndex = 0;
 let score = 0;
 let selectedAnswer = "";
+let gameQuestions = [];
 
 const displayQuestion = () => {
     const currentQuestion = loreQuestions[questionIndex];
