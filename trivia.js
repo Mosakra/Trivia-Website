@@ -101,7 +101,16 @@ let selectedAnswer = "";
 let gameQuestions = [];
 
 const randomQuestions = () => {
-    
+    gameQuestions = [];
+    const availableQuestions = [...loreQuestions];
+
+    for (let i = 0; i < 10; i++){
+        const randomQuestionIndex = Math.floor(Math.random() * availableQuestions.length);
+
+        gameQuestions.push(availableQuestions[randomQuestionIndex]);
+
+       availableQuestions.splice(randomQuestionIndex, 1);
+    }
 }
 
 const displayQuestion = () => {
