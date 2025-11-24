@@ -118,6 +118,9 @@ const displayQuestion = () => {
 
     questionCounter.textContent = `Question ${questionIndex + 1} of ${gameQuestions.length}`;
 
+    const progress = ((questionIndex + 1) / gameQuestions.length) * 100;
+    progressFill.style.width = progress + "%";
+
     questionText.textContent = currentQuestion.question;
     answersContainer.textContent = "";
     nextBtn.style.display = "none";
@@ -145,6 +148,23 @@ const showResults = () => {
     questionScreen.style.display = "none";
     resultsScreen.style.display = "block";
     finalScore.textContent = score + " / " + gameQuestions.length;
+
+    const percentage = (score / gameQuestions.length) * 100;
+    if (percentage === 100){
+        scoreMessage.textContent = "Perfect, Your a true summoner!";
+    }
+    else if (percentage >= 80){
+        scoreMessage.textContent = "Excellent work, You know your lore!";
+    }
+    else if (percentage >= 60){
+        scoreMessage.textContent = "Good job, Keep learning more about it!";
+    }
+    else if (percentage >= 40){
+        scoreMessage.textContent = "Not bad, but there's room for improvent!";
+    }
+    else{
+        scoreMessage.textContent = "Keep learning, You'll get better eventually!"
+    }
 }
 
 
