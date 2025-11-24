@@ -114,9 +114,9 @@ const randomQuestions = () => {
 }
 
 const displayQuestion = () => {
-    const currentQuestion = loreQuestions[questionIndex];
+    const currentQuestion = gameQuestions[questionIndex];
 
-    questionCounter.textContent = `Question ${questionIndex + 1} of ${loreQuestions.length}`;
+    questionCounter.textContent = `Question ${questionIndex + 1} of ${gameQuestions.length}`;
 
     questionText.textContent = currentQuestion.question;
     answersContainer.textContent = "";
@@ -144,17 +144,17 @@ const displayQuestion = () => {
 const showResults = () => {
     questionScreen.style.display = "none";
     resultsScreen.style.display = "block";
-    finalScore.textContent = score + " / " + loreQuestions.length;
+    finalScore.textContent = score + " / " + gameQuestions.length;
 }
 
 
 const nextQuestion = () => {
-    if (selectedAnswer === loreQuestions[questionIndex].correctAnswer){
+    if (selectedAnswer === gameQuestions[questionIndex].correctAnswer){
         score++;
     }
     questionIndex++;
 
-    if (questionIndex < loreQuestions.length){
+    if (questionIndex < gameQuestions.length){
         displayQuestion();
     }
     else{
@@ -166,6 +166,8 @@ const nextQuestion = () => {
 startBtn.addEventListener("click", () => {
     score = 0;
     questionIndex = 0;
+
+    randomQuestions();
 
     startScreen.style.display = "none";
     questionScreen.style.display = "block";
