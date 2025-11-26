@@ -28,6 +28,29 @@
                 <button class="btn-primary" id="start-btn">Start Game</button>
             </div>
 
+            <div id = "category-screen" style="display: none;">
+                <h2>Select Your Category</h2>
+                <p class= "category-subtitle">Choose your trivia challenge</p>
+
+                <div class="category-grid">
+                    <button class = "category-btn" data-category="champions">
+                        <h3>Champions</h3>
+                        <p>Test your knowledge of champion abilities, roles and lore</p>
+                    </button>
+
+                    <button class="category-btn" data-category="lore">
+                        <h3>Lore</h3>
+                        <p>Explore the world of Runeterra and its stories</p>
+                    </button>
+
+                    <button class="category-btn" data-category="gameplay">
+                        <h3>Gameplay</h3>
+                        <p>Items, objectives, and gameplay knowledge</p>
+                    </button>
+                </div>
+                <button class="btn-secondary" id="back-to-start-btn">Back</button>
+            </div>
+
             <div id="question-screen" style="display: none;">
                 <div class="progress-bar">
                     <div class="progress-fill" id="progress-fill"></div>
