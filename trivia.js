@@ -1,14 +1,13 @@
 const getElement = selector => document.querySelector(selector);
 
 const startScreen = getElement("#start-screen");
+const categoryScreen = getElement("#category-screen");
 const questionScreen = getElement("#question-screen");
 const resultsScreen = getElement("#results-screen");
 
-const categoryScreen = getElement("#category-screen");
+const startBtn = getElement("#start-btn");
 const backToStartBtn = getElement("#back-to-start-btn");
 const categoryButtons = document.querySelectorAll(".category-btn");
-
-const startBtn = getElement("#start-btn");
 const nextBtn = getElement("#next-btn");
 const restartBtn = getElement("#restart-btn");
 
