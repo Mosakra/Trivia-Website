@@ -97,8 +97,87 @@ const loreQuestions = [
     }
 ];
 
+const championQuestions = [
+    {
+        question: "Which champion is permanently obscured and appears as a shadow in the fog of war to enemies outside of their immediate vision range?",
+        answers: ["Shaco", "Evelynn", "Twitch", "Kha'Zix"],
+        correctAnswer: "Evelynn"
+    },
+    {
+        question: "Which champion's passive ability grants them a unique, temporary shield called Flow when they accumulate enough resource?",
+        answers: ["Karma", "Irelia", "Yasuo", "Shen"],
+        correctAnswer: "Shen"
+    },
+    {
+        question: "The champion Pyke is known by which ominous title?",
+        answers: ["The Bloody Pirate", "The River King", "The Bloodharbor Ripper", "The Drowned God"],
+        correctAnswer: "The Bloodharbor Ripper"
+    },
+    {
+        question: "Which champion has an ability that allows them to clone themselves and swap places with their clone upon reactivation?",
+        answers: ["LeBlanc", "Neeko", "Wukong", "Shaco"],
+        correctAnswer: "Wukong"
+    },
+    {
+        question: "Which champion's basic attack apply a debuff called Dread that causes their target to take bonus damage from all sources?",
+        answers: ["Fiddlesticks", "Urgot", "Darius", "Mordekaiser"],
+        correctAnswer: "Urgot"
+    },
+    {
+        question: "Which champion is the only one who can place permanent traps on the map without being near a turret?",
+        answers: ["Caitlyn", "Teemo", "Jhin", "Nidalee"],
+        correctAnswer: "Nidalee"
+    },
+    {
+        question: "Which champion is described as a two-headed monster, wielding a pistol and a cannon?",
+        answers: ["Graves", "Gangplank", "Aphelios", "Jinx"],
+        correctAnswer: "Aphelios"
+    },
+    {
+        question: "Which champion's ultimate ability allows them to resurrect themselves instantly after being killed?",
+        answers: ["Anivia", "Zac", "Zilean", "Akshan"],
+        correctAnswer: "Akshan"
+    },
+    {
+        question: "What is the name of the transforming, shape-shifting champion known as 'The Curious Chameleon'?",
+        answers: ["Elise", "Neeko", "Shyvana", "Gnar"],
+        correctAnswer: "Neeko"
+    },
+    {
+        question: "Which champion is described as the 'Grandmaster at Arms'?",
+        answers: ["Fiora", "Master Yi", "Jax", "Garen"],
+        correctAnswer: "Jax"
+    },
+    {
+        question: "Which champion is known as 'The Unshackled'?",
+        answers: ["Sylas", "Gnar", "Volibear", "Sett"],
+        correctAnswer: "Gnar"
+    },
+    {
+        question: "Which champion's ultimate ability, 'Stand United', teleports them to a target allied champion?",
+        answers: ["Pantheon", "Shen", "Galio", "Nocturne"],
+        correctAnswer: "Shen"
+    },
+    {
+        question: "Which champion's passive causes them to accumulate stacks that increase their movement speed, up to a maximum of 100 stacks?",
+        answers: ["Rammus", "Hecarim", "Olaf", "Udyr"],
+        correctAnswer: "Hecarim"
+    },
+    {
+        question: "Which champion's basic attacks hit multiple targets in a cone in front of them?",
+        answers: ["Graves", "Twitch", "Miss Fortune", "Sivir"],
+        correctAnswer: "Graves"
+    },
+    {
+        question: "Which champion can purchase and store a total of 6 wards at one time in their inventory?",
+        answers: ["Thresh", "Pyke", "Bard", "Rakan"],
+        correctAnswer: "Rakan"
+    }
+];
+
 const allQuestions = {
-    lore: loreQuestions
+    lore: loreQuestions,
+    champions: championQuestions
 }
 
 
@@ -230,6 +309,11 @@ categoryButtons.forEach(button => {
         const category = button.getAttribute("data-category");
 
         if (category === 'lore'){
+            currentQuestionPool = allQuestions[category];
+
+            startGame();
+        }
+        else if (category === 'champions'){
             currentQuestionPool = allQuestions[category];
 
             startGame();
