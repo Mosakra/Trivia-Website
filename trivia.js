@@ -97,17 +97,23 @@ const loreQuestions = [
     }
 ];
 
+const allQuestions = {
+    lore: loreQuestions
+}
+
 
 let questionIndex = 0;
 let score = 0;
 let selectedAnswer = "";
 let gameQuestions = [];
+let currentQuestionPool = [];
 
-const randomQuestions = () => {
+const randomQuestions = (questionPool) => {
     gameQuestions = [];
-    const availableQuestions = [...loreQuestions];
+    const questionCount = Math.min(10, questionPool.length)
+    const availableQuestions = [...questionPool];
 
-    for (let i = 0; i < 10; i++){
+    for (let i = 0; i < questionCount; i++){
         const randomQuestionIndex = Math.floor(Math.random() * availableQuestions.length);
 
         gameQuestions.push(availableQuestions[randomQuestionIndex]);
@@ -185,17 +191,23 @@ const nextQuestion = () => {
     }
 }
 
+const startGame = () => {
+    randomQuestions(currentQuestionPool);
+
+    categoryScreen.style.display = "none";
+    questionScreen.style.display = "block";
+
+    displayQuestion();
+}
+
 
 startBtn.addEventListener("click", () => {
     score = 0;
     questionIndex = 0;
 
-    randomQuestions();
-
     startScreen.style.display = "none";
     categoryScreen.style.display = "block";
 
-    displayQuestion();
 })
 
 backToStartBtn.addEventListener("click", () => {
