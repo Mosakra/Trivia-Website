@@ -293,9 +293,9 @@ const displayQuestion = () => {
     nextBtn.style.display = "none";
 
     let shuffledAnswers = [...currentQuestion.answers];
-    shuffledAnswers.sort(Math.random() - 0.5);
+    shuffledAnswers.sort(() => Math.random() - 0.5);
 
-    for (let i = 0; i < currentQuestion.answers.length; i++){
+    for (let i = 0; i < shuffledAnswers.length; i++){
         const btn = document.createElement("button");
         btn.textContent = shuffledAnswers[i];
         btn.classList.add("answer-btn");
