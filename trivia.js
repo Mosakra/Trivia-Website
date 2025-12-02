@@ -224,3 +224,15 @@ restartBtn.addEventListener("click", () => {
     questionScreen.style.display = "none";
     resultsScreen.style.display = "none";
 })
+
+categoryButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const category = button.getAttribute("date-category");
+
+        if (category === 'lore'){
+            currentQuestionPool = allQuestions[category];
+
+            startGame();
+        }
+    })
+});
