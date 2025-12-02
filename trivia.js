@@ -175,9 +175,88 @@ const championQuestions = [
     }
 ];
 
+const gameplayQuestions = [
+    {
+        question: "How many total stacks of Turret Plating exist on an outer turret before they fall off?",
+        answers: ["Three", "Four", "Five", "Six"],
+        correctAnswer: "Five"
+    },
+    {
+        question: "Which status effect reduces the effectiveness of all healing, regeneration, and life steal by a percentage?",
+        answers: ["Blind", "Stun", "Silence", "Grievous Wounds"],
+        correctAnswer: "Grievous Wounds"
+    },
+    {
+        question: "A champion who successfully executes the Rift Herald gains a buff called Eye of the Herald. How long does this item last in the champion's inventory before auto using?",
+        answers: ["180 seconds", "200 seconds", "240 seconds", "300 seconds"],
+        correctAnswer: "240 seconds"
+    },
+    {
+        question: "What is the minimum number of consecutive basic attacks required for a champion to fully proc the passive effect of the keystone rune Lethal Tempo?",
+        answers: ["Two", "Three", "Five", "Six"],
+        correctAnswer: "Six"
+    },
+    {
+        question: "The passive effect of the item Banshee's Veil grants what defensive layer?",
+        answers: ["Spell Vamp", "Magic Penetraction", "Spell Shield", "Health Regeneration"],
+        correctAnswer: "Spell Shield"
+    },
+    {
+        question: "When a team takes the third elemental dragon, they gain a permanent buff. What is the maximum number of unique elemental dragon buffs a team can posses before taking the Dragon Soul?",
+        answers: ["Two", "Three", "Four", "Five"],
+        correctAnswer: "Three"
+    },
+    {
+        question: "Which of these jungle camp monsters is known for splitting into two smaller units when defeated?",
+        answers: ["Gromp", "Blue Sentinel", "Red Brambleback", "Krugs"],
+        correctAnswer: "Krugs"
+    },
+    {
+        question: "What is the term for an ability that prevents the target from performing any action, but does not stop them from moving?",
+        answers: ["Stun", "Root", "Suppression", "Silence"],
+        correctAnswer: "Silence"
+    },
+    {
+        question: "What is the offical name of the buff received from destroying an enemy Inhibitor?",
+        answers: ["Elder Minions", "Super Minions", "Mega Minions", "Fortified Minions"],
+        correctAnswer: "Super Minions"
+    },
+    {
+        question: "Which of these boots provides a reduction to the duration of incoming Crowd Control effects?",
+        answers: ["Berserker's Greaves", "Sorcerer's Shoes", "Mercury's Treads", "Swiftness Boots"],
+        correctAnswer: "Mercury's Treads"
+    },
+    {
+        question: "What type of damage is typically dealt by the passive effect of the item Liandry's Anguish",
+        answers: ["Physical", "True", "Magic", "Adaptive"],
+        correctAnswer: "Magic"
+    },
+    {
+        question: "How many gold coins does a player receive for successfully destroying a single piece of Turret Plating?",
+        answers: ["100 Gold", "150 Gold", "175 Gold", "200 Gold"],
+        correctAnswer: "175 Gold"
+    },
+    {
+        question: "Which major objective temporarily replaces the Dragon spawn aafter one team secures their Dragon Soul?",
+        answers: ["Void Grubs", "Rift Herald", "Elder Dragon", "Scuttle Crab"],
+        correctAnswer: "Elder Dragon"
+    },
+    {
+        question: "Which common objective provides a large burst of True Damage to enemies based on a percentage of their current health?",
+        answers: ["Mountain Drake", "Baron Nashor", "Infernal Drake", "Cloud Drake"],
+        correctAnswer: "Infernal Drake"
+    },
+    {
+        question: "What role in the team, after making one bad play. Get's talked down to the most?",
+        answers: ["TOP", "MID", "ADC", "JGL"],
+        correctAnswer: "JGL"
+    }
+]
+
 const allQuestions = {
     lore: loreQuestions,
-    champions: championQuestions
+    champions: championQuestions,
+    gameplay: gameplayQuestions
 }
 
 
@@ -314,6 +393,11 @@ categoryButtons.forEach(button => {
             startGame();
         }
         else if (category === 'champions'){
+            currentQuestionPool = allQuestions[category];
+
+            startGame();
+        }
+        else if (category === 'gameplay'){
             currentQuestionPool = allQuestions[category];
 
             startGame();
