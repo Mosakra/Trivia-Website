@@ -227,7 +227,7 @@ restartBtn.addEventListener("click", () => {
 
 categoryButtons.forEach(button => {
     button.addEventListener("click", () => {
-        const category = button.getAttribute("date-category");
+        const category = button.getAttribute("data-category");
 
         if (category === 'lore'){
             currentQuestionPool = allQuestions[category];
